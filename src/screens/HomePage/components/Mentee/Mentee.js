@@ -45,6 +45,13 @@ export default class Mentee extends Component {
         })
     }
 
+    prevousStepMentee = () => {
+        if (this.state.step > 1)
+            this.setState({
+                step: this.state.step - 1
+            })
+    }
+
     toggleMentee = () => {
         console.log('OK');
         this.setState({
@@ -180,7 +187,14 @@ export default class Mentee extends Component {
                     {stepComponent}
                     <div className="uk-margin">
                         {
-                            this.state.step < 7 ? <button className="uk-button uk-float-right uk-button-primary" onClick={this.nextStepMentee}>Tiếp tục</button> : <button className="uk-button uk-float-right uk-button-primary" onClick={this.submit}>Đăng kí</button>
+                            this.state.step < 10
+                                ? (this.state.step > 1
+                                    ? <div className="col-12 offset-md-5 col-md-7 no-padding uk-flex uk-flex-between">
+                                        <button className="uk-button uk-float-right uk-button-default" onClick={this.prevousStepMentee}>Trở lại</button>
+                                        <button className="uk-button uk-float-right uk-button-primary" onClick={this.nextStepMentee}>Tiếp tục</button>
+                                    </div>
+                                    : <button className="uk-button uk-float-right uk-button-primary" onClick={this.nextStepMentee}>Tiếp tục</button>)
+                                : <button className="uk-button uk-float-right uk-button-primary" disabled={this.state.clicked} onClick={this.submit}>Đăng kí</button>
                         }
                     </div>
                 </ModalBody>

@@ -1,4 +1,4 @@
-import $ from 'jquery'
+import $ from 'jquery';
 import React, { Component } from 'react';
 
 import UIkit from 'uikit';
@@ -33,6 +33,12 @@ export default class Mentor extends Component {
         this.setState({
             step: this.state.step + 1
         })
+    }
+    prevousStepMentor = () => {
+        if (this.state.step > 1)
+            this.setState({
+                step: this.state.step - 1
+            })
     }
 
     toggleMentor = () => {
@@ -146,7 +152,14 @@ export default class Mentor extends Component {
                     {stepComponent}
                     <div className="uk-margin">
                         {
-                            this.state.step < 3 ? <button className="uk-button uk-float-right uk-button-primary" onClick={this.nextStepMentor}>Tiếp tục</button> : <button className="uk-button uk-float-right uk-button-primary" disabled={this.state.clicked} onClick={this.submit}>Đăng kí</button>
+                            this.state.step < 3 
+                            ? (this.state.step > 1
+                                ? <div className="col-12 offset-md-5 col-md-7 no-padding uk-flex uk-flex-between">
+                                    <button className="uk-button uk-float-right uk-button-default" onClick={this.prevousStepMentor}>Trở lại</button>
+                                    <button className="uk-button uk-float-right uk-button-primary" onClick={this.nextStepMentor}>Tiếp tục</button>
+                                </div>
+                                : <button className="uk-button uk-float-right uk-button-primary" onClick={this.nextStepMentor}>Tiếp tục</button>)
+                            : <button className="uk-button uk-float-right uk-button-primary" disabled={this.state.clicked} onClick={this.submit}>Đăng kí</button>
                         }
                     </div>
                 </ModalBody>
