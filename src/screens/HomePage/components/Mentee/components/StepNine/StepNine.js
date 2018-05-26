@@ -8,27 +8,27 @@ export const StepNine = (props) => {
                 <label className="uk-form-label" htmlFor="title">(*) Trường bắt buộc</label>
             </div>
             <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="fullName">Bạn mong muốn điều gì trong 5-10 năm tới?</label>
+                <label className="uk-form-label" htmlFor="wishMentee">Bạn mong muốn điều gì trong 5-10 năm tới?</label>
                 <div className="uk-form-controls">
-                    <input onChange={props.handleInputChange} className="uk-input" name="fullName" id="fullName" type="text" placeholder="" />
+                    <textarea onChange={props.handleInputChange} className="uk-input" name="wishMentee" id="wishMentee" type="text" placeholder="" ></textarea>
                 </div>
             </div>
             <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="facebookLink">Mơ ước lớn lao nhất trong đời của bạn (nếu có) là gì?</label>
+                <label className="uk-form-label" htmlFor="dreamMentee">Mơ ước lớn lao nhất trong đời của bạn (nếu có) là gì?</label>
                 <div className="uk-form-controls">
-                    <input onChange={props.handleInputChange} className="uk-input" name="facebookLink" id="facebookLink" type="text" placeholder="" />
+                    <textarea onChange={props.handleInputChange} className="uk-input" name="dreamMentee" id="dreamMentee" type="text" placeholder="" ></textarea>
                 </div>
             </div>
             <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="facebookLink">Những khó khăn hiện tại của bạn</label>
+                <label className="uk-form-label" htmlFor="stuckMentee">Những khó khăn hiện tại của bạn</label>
                 <div className="uk-form-controls">
-                    <input onChange={props.handleInputChange} className="uk-input" name="facebookLink" id="facebookLink" type="text" placeholder="" />
+                    <textarea onChange={props.handleInputChange} className="uk-input" name="stuckMentee" id="stuckMentee" type="text" placeholder="" ></textarea>
                 </div>
             </div>
             <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="facebookLink">Kế hoạch của bạn khi nhận được khoản hỗ trợ là gì?</label>
+                <label className="uk-form-label" htmlFor="planMentee">Kế hoạch của bạn khi nhận được khoản hỗ trợ là gì?</label>
                 <div className="uk-form-controls">
-                    <input onChange={props.handleInputChange} className="uk-input" name="facebookLink" id="facebookLink" type="text" placeholder="" />
+                    <textarea onChange={props.handleInputChange} className="uk-input" name="planMentee" id="planMentee" type="text" placeholder="" ></textarea>
                 </div>
             </div>
         </div>

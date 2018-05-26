@@ -137,7 +137,7 @@ export default class Mentee extends Component {
         let stepComponent = null;
         switch (this.state.step) {
             case 1:
-                stepComponent = <StepNine modal={this.state.modalMentee} toggle={this.toggleMentee} handleInputChange={this.handleInputChange} />
+                stepComponent = <StepOne modal={this.state.modalMentee} toggle={this.toggleMentee} handleInputChange={this.handleInputChange} />
                 break;
             case 2:
                 stepComponent = <StepTwo modal={this.state.modalMentee} toggle={this.toggleMentee} handleInputChange={this.handleInputChange} />
@@ -153,6 +153,21 @@ export default class Mentee extends Component {
                 break;
             case 6:
                 stepComponent = <StepSix modal={this.state.modalMentee} toggle={this.toggleMentee} handleInputChange={this.handleInputChange} />
+                break;
+            case 7:
+                stepComponent = <StepSeven modal={this.state.modalMentee} toggle={this.toggleMentee} handleInputChange={this.handleInputChange} />
+                break;
+            case 8:
+                stepComponent = <StepEight modal={this.state.modalMentee} toggle={this.toggleMentee} handleInputChange={this.handleInputChange} />
+                break;
+            case 9:
+                stepComponent = <StepNine modal={this.state.modalMentee} toggle={this.toggleMentee} handleInputChange={this.handleInputChange} />
+                break;
+            case 10:
+                stepComponent = <StepTen modal={this.state.modalMentee} toggle={this.toggleMentee} handleInputChange={this.handleInputChange} />
+                break;
+            case 11:
+                stepComponent = <StepEleven modal={this.state.modalMentee} toggle={this.toggleMentee} handleInputChange={this.handleInputChange} />
                 break;
             default:
                 stepComponent = <StepSorry modal={this.state.modalMentee} toggle={this.toggleMentee} handleInputChange={this.handleInputChange} />

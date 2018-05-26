@@ -11,31 +11,31 @@ export const StepSix = (props) => {
             <div className="uk-margin">
                 <label className="uk-form-label" htmlFor="fullName">Họ và tên người giới thiệu *:</label>
                 <div className="uk-form-controls">
-                    <input onChange={props.handleInputChange} className="uk-input" name="fullName" id="fullName" type="text" placeholder="" />
+                    <input onChange={props.handleInputChange} className="uk-input" name="fullNamePresenter" id="fullNamePresenter" type="text" placeholder="" />
                 </div>
             </div>
             <div className="uk-margin">
                 <label className="uk-form-label" htmlFor="phoneNumber">Số điện thoại/Zalo/Viber *:</label>
                 <div className="uk-form-controls">
-                    <input onChange={props.handleInputChange} className="uk-input" name="phoneNumber" id="phoneNumber" type="text" placeholder="" />
+                    <input onChange={props.handleInputChange} className="uk-input" name="phoneNumberPresenter" id="phoneNumberPresenter" type="text" placeholder="" />
                 </div>
             </div>
             <div className="uk-margin">
                 <label className="uk-form-label" htmlFor="email">Email *:</label>
                 <div className="uk-form-controls">
-                    <input onChange={props.handleInputChange} className="uk-input" name="email" id="email" type="text" placeholder="" />
+                    <input onChange={props.handleInputChange} className="uk-input" name="emailPresenter" id="emailPresenter" type="text" placeholder="" />
                 </div>
             </div>
             <div className="uk-margin">
                 <label className="uk-form-label" htmlFor="facebookLink">Địa chỉ Facebook:</label>
                 <div className="uk-form-controls">
-                    <input onChange={props.handleInputChange} className="uk-input" name="facebookLink" id="facebookLink" type="text" placeholder="" />
+                    <input onChange={props.handleInputChange} className="uk-input" name="facebookLinkPresenter" id="facebookLinkPresenter" type="text" placeholder="" />
                 </div>
             </div>
             <div className="uk-form-controls">
                 <p className="uk-form-label uk-text-break">Bạn đã gửi đường link Reference Form cho người giới thiệu chưa? <a target="_blank" href="https://docs.google.com/forms/d/13cvtEX5D5DqdCmTB7ayOKIdr7P4nrKMEcvvBsA481hc/edit?ts=5a5b24b4">https://docs.google.com/forms/d/13cvtEX5D5DqdCmTB7ayOKIdr7P4nrKMEcvvBsA481hc/edit?ts=5a5b24b4</a></p>
-                <label className="uk-form-label"><input onChange={props.handleInputChange} className="uk-radio" id="radioAgree" name="radioAgree" type="radio" value="Yes" checked={true} /> Tôi đồng ý</label><br />
-                <label className="uk-form-label"><input onChange={props.handleInputChange} className="uk-radio" id="radioNotAgree" name="radioAgree" type="radio" value="No" /> Tôi không đồng ý</label>
+                <label className="uk-form-label"><input onChange={props.handleInputChange} className="uk-radio" id="radioAgreeSendLinkToPresenter" name="radioAgreeSendLinkToPresenter" type="radio" value="Yes" checked={true} /> Tôi đồng ý</label><br />
+                <label className="uk-form-label"><input onChange={props.handleInputChange} className="uk-radio" id="radioNotAgreeSendLinkToPresenter" name="radioNotAgreeSendLinkToPresenter" type="radio" value="No" /> Tôi không đồng ý</label>
             </div>
         </div>
     )
