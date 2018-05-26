@@ -38,7 +38,6 @@ export default class HomePage extends Component {
     document.addEventListener('scroll', () => {
       const isBottom = window.pageYOffset > 2500;
       if (isBottom !== this.state.isScrollToFooter) {
-        console.log(isBottom);
         this.setState({ isScrollToFooter: isBottom })
       }
     });

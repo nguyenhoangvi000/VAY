@@ -42,7 +42,6 @@ export default class Mentor extends Component {
     }
 
     toggleMentor = () => {
-        console.log('OK');
         this.setState({
             modalMentor: !this.state.modalMentor
         })

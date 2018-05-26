@@ -53,7 +53,6 @@ export default class Mentee extends Component {
     }
 
     toggleMentee = () => {
-        console.log('OK');
         this.setState({
             modalMentee: !this.state.modalMentee
         })

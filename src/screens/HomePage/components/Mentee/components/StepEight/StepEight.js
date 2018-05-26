@@ -26,7 +26,7 @@ export const StepEight = (props) => {
                 </div>
             </div>
             <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="archivementMentee">Các thành tích khác nếu có*:</label>
+                <label className="uk-form-label" htmlFor="archivementMentee">Các thành tích khác nếu có:</label>
                 <div className="uk-form-controls">
                     <input onChange={props.handleInputChange} className="uk-input" name="archivementMentee" id="archivementMentee" type="text" placeholder="" />
                 </div>

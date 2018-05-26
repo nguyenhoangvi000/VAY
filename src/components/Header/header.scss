@@ -5,18 +5,38 @@
 @import '../../common/styles/_helper.scss';
 .header-container {
     .navbar {
-        background-color: white !important;
+        background-color: white;
         height: em(65);
-        .navbar-nav {
-            background-color: white;
-        }
+        // .navbar-nav {
+        //     background-color: white;
+        // }
         .uk-button-text {
             height: em(50);
         }
-        .nav-link {
-        }
+        .nav-link {}
         .logo-image {
             height: em(30);
+        }
+    }
+    .scrolled {
+        background-color: #0f0111 !important;
+        transition: background-color 200ms linear;
+        .navbar-nav {
+            color: white !important;
+            transition: color 200ms linear;
+            .nav-link {
+                color: white;
+                
+            }
+            .nav-link:hover {
+                color: white;
+            }
+            .nav-link:hover {
+                color: white;
+            }
+            .uk-button-text::before {
+                border-bottom: 1px solid white;
+            }
         }
     }
 }
