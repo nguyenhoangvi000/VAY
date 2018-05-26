@@ -1,0 +1,53 @@
+@import './common/styles/_variables.scss';
+@import './common/styles/_function.scss';
+@import './common/styles/_variables.scss';
+@import './common/styles/_colors.scss';
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.uk-offcanvas {
+    z-index: 9999 !important;
+    background-color: white;
+    .uk-offcanvas-bar {
+        width: 100% !important;
+        color: black;
+        background-color: white;
+    }
+}
+
+#how-to-donate {
+    .image-header {
+        vertical-align: middle;
+        text-align: center;
+    }
+    th {
+        color: black;
+        .img-bank {
+            height: em(120);
+            width: em(120);
+        }
+    }
+    h3 {
+        color: black !important;
+    }
+}
+
+#donation-list {
+    .image-header {
+        vertical-align: middle;
+        text-align: center;
+    }
+    th {
+        color: black;
+        .img-bank {
+            height: em(120);
+            width: em(120);
+        }
+    }
+    h3 {
+        color: black !important;
+    }
+}

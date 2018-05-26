@@ -1,0 +1,33 @@
+@import '../../common/styles/_variables.scss';
+@import '../../common/styles/_function.scss';
+@import '../../common/styles/_fonts.scss';
+@import '../../common/styles/_colors.scss';
+@import '../../common/styles/_helper.scss';
+.header-container {
+    .navbar {
+        background-color: white !important;
+        height: em(65);
+        .navbar-nav {
+            background-color: white;
+        }
+        .uk-button-text {
+            height: em(50);
+        }
+        .nav-link {
+        }
+        .logo-image {
+            height: em(30);
+        }
+    }
+}
+
+@media (max-width: 575.98px) {}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {}

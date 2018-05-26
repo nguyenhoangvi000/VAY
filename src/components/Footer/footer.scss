@@ -1,0 +1,65 @@
+@import '../../common/styles/_variables.scss';
+@import '../../common/styles/_function.scss';
+@import '../../common/styles/_variables.scss';
+@import '../../common/styles/_colors.scss';
+@import '../../common/styles/_helper.scss';
+.footer-container {
+    background-color: #0f0111;
+    color: white;
+    min-height: em(400);
+    height: auto;
+    padding: em(40) em(0) em(0) em(0);
+    .footer-content {
+        height: 100%;
+        .footer-widget {
+            .logo-image {
+                width: em(80);
+                height: em(80);
+            }
+            .organization-name {
+                margin-top: em(30);
+            }
+            .spacing-footer-content {
+                margin-top: em(40);
+            }
+            .uk-text-left {
+                font-size: $font-size-medium;
+            }
+        }
+        .footer-pane {
+            border-top: 1px solid rgba($color: white, $alpha: 0.2);
+            padding: em(10) 0;
+        }
+        .facebook-fanpage {
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    // .facebook-fanpage {
+    //     display: none;
+    // }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    // .facebook-fanpage {
+    //     div {
+    //         display: none;
+    //     }
+    // }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .facebook-fanpage {
+        display: none;
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    .facebook-fanpage {
+        display: none;
+    }
+}

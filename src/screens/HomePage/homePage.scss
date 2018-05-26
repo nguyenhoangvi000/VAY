@@ -1,0 +1,76 @@
+@import '../../common/styles/_variables.scss';
+@import '../../common/styles/_function.scss';
+@import '../../common/styles/_variables.scss';
+@import '../../common/styles/_colors.scss';
+@import '../../common/styles/_helper.scss';
+.homepage-container {
+    .background-section {
+        padding-top: em(200);
+        min-height: em(640);
+        height: auto;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../../assets/images/background.jpg');
+        .uk-button {
+            color: white;
+            margin-top: em(40);
+            float: left;
+        }
+        .main-header {
+            font-size: $font-size-xxx-large;
+            color: white;
+        }
+    }
+    .investor-list-section {
+        .uk-button {
+            position: fixed;
+            background-color: white;
+            font-weight: bold;
+            left: 0;
+            border: solid em(2) rgba($color: #000000, $alpha: 0.2);
+            top: em(600);
+            z-index: 100;
+        }
+    }
+    .how-to-donate {
+        
+        .uk-button {
+            position: fixed;
+            background-color: white;
+            font-weight: bold;
+            right: 0;
+            border: solid em(2) rgba($color: #000000, $alpha: 0.2);
+            top: em(600);
+            z-index: 100;
+        }
+    }
+    .about-us-section {
+        min-height: em(400);
+        margin-top: em(20);
+    }
+    .scheme-section {
+        min-height: em(400);
+        margin-top: em(100);
+    }
+    .member-section {
+        min-height: em(400);
+        margin-top: em(100);
+        .uk-card-default {
+            height: em(320);
+        }
+        .image-card {
+            width: em(140);
+            height: em(140);
+        }
+    }
+    .register-section {
+        min-height: em(400);
+        padding: em(50) 0;
+        margin-top: em(100);
+    }
+    .sub-header {
+        font-size: $font-size-xx-large;
+    }
+}

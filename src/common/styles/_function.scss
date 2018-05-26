@@ -1,0 +1,8 @@
+$browser-context: 16; // Default
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+@mixin marginTopBot($top, $bottom) {
+  margin: em($top) em($bottom);
+}
