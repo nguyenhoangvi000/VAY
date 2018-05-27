@@ -4,7 +4,7 @@ import diagram from '../../../../assets/images/diagramUpdate.png';
 export const Scheme = (props) => {
     return (
         <div className="row scheme-section">
-            <div className="col-8 mx-auto">
+            <div className="col-12 col-md-8 mx-auto">
                 <h6 className="sub-header">Mô hình</h6>
                 <hr className="uk-divider-icon" />
                 <div className="col-9 mx-auto">

@@ -9,13 +9,13 @@ export const StepSix = (props) => {
                 <label className="uk-form-label" htmlFor="title">(*) Trường bắt buộc</label>
             </div>
             <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="fullName">Họ và tên người giới thiệu *:</label>
+                <label className="uk-form-label" htmlFor="fullNamePresenter">Họ và tên người giới thiệu *:</label>
                 <div className="uk-form-controls">
                     <input onChange={props.handleInputChange} className="uk-input" name="fullNamePresenter" id="fullNamePresenter" type="text" placeholder="" />
                 </div>
             </div>
             <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="phoneNumber">Số điện thoại/Zalo/Viber *:</label>
+                <label className="uk-form-label" htmlFor="phoneNumberPresenter">Số điện thoại/Zalo/Viber *:</label>
                 <div className="uk-form-controls">
                     <input onChange={props.handleInputChange} className="uk-input" name="phoneNumberPresenter" id="phoneNumberPresenter" type="text" placeholder="" />
                 </div>

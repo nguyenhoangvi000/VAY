@@ -25,14 +25,33 @@ export default class Mentee extends Component {
         this.state = {
             modalMentee: false,
             mentee: {
-                fullName: '',
-                phoneNumber: '',
-                email: '',
-                job: '',
-                experience: '',
-                facebookLink: '',
-                moreHelp: '',
-                agree: 'Yes'
+                fullNamePresenter: "",
+                phoneNumberPresenter: "",
+                emailPresenter: "",
+                facebookLinkPresenter: "",
+                fullNameMentee: "",
+                DOBMentee: "",
+                homeTownMentee: "",
+                schoolMentee: "",
+                numberOfMoney: "",
+                purposeUsingMoney: "",
+                phoneNumberMentee: "",
+                emailMentee: "",
+                linkAvatarMentee: "",
+                facebookLinkMentee: "",
+                markResultMentee: "",
+                linkImageMark: "",
+                archivementMentee: "",
+                linkCardMentee: "",
+                wishMentee: "",
+                dreamMentee: "",
+                stuckMentee: "",
+                planMentee: "",
+                successorMentee: "",
+                planGraduate: "",
+                whyhelpMentee: "",
+                ifnotMentee: "",
+                donateMentee: "",
             },
             clicked: false,
             step: 1
@@ -40,6 +59,7 @@ export default class Mentee extends Component {
     }
 
     nextStepMentee = () => {
+        console.log(this.state.mentee);
         this.setState({
             step: this.state.step + 1
         })
@@ -60,15 +80,17 @@ export default class Mentee extends Component {
 
     submit = () => {
         let that = this;
-        this.setState({
-            clicked: true
-        })
+        console.log("OK");
+        // this.setState({
+        //     clicked: true
+        // })
         var jqxhr = $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbxniJlti2YnjQcAeo43pzh27ThI6pgzdmzaRxYekgfv-KqttH8v/exec',
+            url: 'https://script.google.com/macros/s/AKfycbyYQ1g2-trWKZAahLKRUe4EI1iPYQ8mup4H716ix--JElenmace/exec',
             method: "POST",
             dataType: "json",
             data: JSON.parse(JSON.stringify(this.state.mentee))
         }).then((res) => {
+            console.log(res);
             if (res.result === "success") {
                 that.togglementee();
                 this.setState({
@@ -90,48 +112,169 @@ export default class Mentee extends Component {
 
     handleInputChange = (event) => {
         switch (event.target.id) {
-            case "fullName":
+            case "fullNamePresenter":
                 this.setState({
-                    mentee: Object.assign({}, this.state.mentee, { fullName: event.target.value })
+                    mentee: Object.assign({}, this.state.mentee, { fullNamePresenter: event.target.value })
                 })
                 break;
-            case "phoneNumber":
+            case "phoneNumberPresenter":
                 this.setState({
-                    mentee: Object.assign({}, this.state.mentee, { phoneNumber: event.target.value })
+                    mentee: Object.assign({}, this.state.mentee, { phoneNumberPresenter: event.target.value })
                 })
                 break;
-            case "email":
+            case "emailPresenter":
                 this.setState({
-                    mentee: Object.assign({}, this.state.mentee, { email: event.target.value })
+                    mentee: Object.assign({}, this.state.mentee, { emailPresenter: event.target.value })
                 })
                 break;
-            case "job":
+            case "facebookLinkPresenter":
                 this.setState({
-                    mentee: Object.assign({}, this.state.mentee, { job: event.target.value })
+                    mentee: Object.assign({}, this.state.mentee, { facebookLinkPresenter: event.target.value })
                 })
                 break;
-            case "experience":
+            case "fullNameMentee":
                 this.setState({
-                    mentee: Object.assign({}, this.state.mentee, { experience: event.target.value })
-
+                    mentee: Object.assign({}, this.state.mentee, { fullNameMentee: event.target.value })
                 })
                 break;
-            case "facebookLink":
+            case "DOBMentee":
                 this.setState({
-                    mentee: Object.assign({}, this.state.mentee, { facebookLink: event.target.value })
-
+                    mentee: Object.assign({}, this.state.mentee, { DOBMentee: event.target.value })
                 })
                 break;
-            case "moreHelp":
+            case "homeTownMentee":
                 this.setState({
-                    mentee: Object.assign({}, this.state.mentee, { moreHelp: event.target.value })
-
+                    mentee: Object.assign({}, this.state.mentee, { homeTownMentee: event.target.value })
                 })
                 break;
-            case "radioNotAgree":
-                console.log(event.target.value);
+            case "schoolMentee":
                 this.setState({
-                    mentee: Object.assign({}, this.state.mentee, { agree: event.target.value })
+                    mentee: Object.assign({}, this.state.mentee, { schoolMentee: event.target.value })
+                })
+                break;
+            case "numberOfMoney":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { numberOfMoney: event.target.value })
+                })
+                break;
+            case "purposeUsingMoney":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { purposeUsingMoney: event.target.value })
+                })
+                break;
+            case "phoneNumberMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { phoneNumberMentee: event.target.value })
+                })
+                break;
+            case "emailMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { emailMentee: event.target.value })
+                })
+                break;
+            case "linkAvatarMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { linkAvatarMentee: event.target.value })
+                })
+                break;
+            case "facebookLinkMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { facebookLinkMentee: event.target.value })
+                })
+                break;
+            case "markResultMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { markResultMentee: event.target.value })
+                })
+                break;
+            case "linkImageMark":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { linkImageMark: event.target.value })
+                })
+                break;
+            case "archivementMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { archivementMentee: event.target.value })
+                })
+                break;
+            case "linkIDMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { linkCardMentee: event.target.value })
+                })
+                break;
+            case "wishMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { wishMentee: event.target.value })
+                })
+                break;
+            case "dreamMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { dreamMentee: event.target.value })
+                })
+                break;
+            case "stuckMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { stuckMentee: event.target.value })
+                })
+                break;
+            case "planMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { planMentee: event.target.value })
+                })
+                break;
+            case "successorMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { successorMentee: event.target.value })
+                })
+                break;
+            case "planGraduate":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { planGraduate: event.target.value })
+                })
+                break;
+            case "whyhelpMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { whyhelpMentee: event.target.value })
+                })
+                break;
+            case "ifnotMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { ifnotMentee: event.target.value })
+                })
+                break;
+            case "donateMentee":
+                this.setState({
+                    mentee: Object.assign({}, this.state.mentee, { donateMentee: event.target.value })
+                })
+                break;
+            case "radioNotAgreeReturnMoney":
+                this.setState({
+                    step: -1
+                })
+                break;
+            case "radioNotAgreeSendMoney":
+                this.setState({
+                    step: -1
+                })
+                break;
+            case "radioNotAgreeMeetmentor":
+                this.setState({
+                    step: -1
+                })
+                break;
+            case "radioNotAgreeUseMoneyOnPurpose":
+                this.setState({
+                    step: -1
+                })
+                break;
+            case "radioNotAgreeTermOfService":
+                this.setState({
+                    step: -1
+                })
+                break;
+            case "radioNotAgreeSendLinkToPresenter":
+                this.setState({
+                    step: -1
                 })
                 break;
             default:
@@ -186,7 +329,8 @@ export default class Mentee extends Component {
                     {stepComponent}
                     <div className="uk-margin">
                         {
-                            this.state.step < 10
+                            this.state.step!=-1
+                            ? this.state.step < 10
                                 ? (this.state.step > 1
                                     ? <div className="col-12 offset-md-5 col-md-7 no-padding uk-flex uk-flex-between">
                                         <button className="uk-button uk-float-right uk-button-default" onClick={this.prevousStepMentee}>Trở lại</button>
@@ -194,6 +338,7 @@ export default class Mentee extends Component {
                                     </div>
                                     : <button className="uk-button uk-float-right uk-button-primary" onClick={this.nextStepMentee}>Tiếp tục</button>)
                                 : <button className="uk-button uk-float-right uk-button-primary" disabled={this.state.clicked} onClick={this.submit}>Đăng kí</button>
+                            : ''
                         }
                     </div>
                 </ModalBody>

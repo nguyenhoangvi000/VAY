@@ -7,7 +7,7 @@ import s5 from '../../../../assets/images/s5.jpg';
 export const Member = (props) => {
     return (
         <div className="row member-section">
-            <div className="col-8 mx-auto">
+            <div className="col-12 col-md-8 mx-auto">
                 <h6 className="sub-header">Thành viên</h6>
                 <hr className="uk-divider-icon" />
                 <div className="row">

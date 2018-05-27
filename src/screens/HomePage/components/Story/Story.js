@@ -3,7 +3,7 @@ import React from "react";
 export const Story = (props) => {
     return (
         <div className="row about-us-section">
-            <div className="col-8 mx-auto">
+            <div className="col-12 col-md-8 mx-auto">
                 <h6 className="sub-header">Câu chuyện</h6>
                 <hr className="uk-divider-icon" />
                 <p className="uk-text-justify">Nhớ khoảng 20 năm về trước khi mới lên học đại học, dù chỉ vô tình nhường tí cơm cho một người bạn ở trọ cùng phòng vài tháng không nghĩ ngợi gì, nhưng bạn ấy vẫn luôn cảm kích và có động lực để tiếp tục phấn đấu, hoàn thành đại học, rồi cao học và giờ đây có một cuộc sống rất tốt đẹp và viên mãn ở một nơi xa.</p>

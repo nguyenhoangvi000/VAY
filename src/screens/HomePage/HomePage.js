@@ -94,55 +94,53 @@ export default class HomePage extends Component {
                   <span aria-hidden="true">&times;</span>
                 </button>
                 <div className="container">
-                  <div className="col-8 mx-auto">
-                    <p className="">Xin chân thành cám ơn các Thầy, Cô, bạn bè, cùng các anh chị em đã chung tay đóng góp cho Vietnamese and Youth (VAY). </p>
-                    <p>Ngoài ra, Thừa xin phép ghi tên mọi người theo cách gọi thân quen thay vì để họ tên đầy đủ. Ai muốn được ghi rõ họ tên thì báo Thừa sửa lại nhé. </p>
-                    <p>Tự tin là không bỏ sót tên của anh chị em nào, nhưng nếu có thì vui lòng nhắn tin cho Thừa kiểm tra lại và ghi thêm vào nhe mọi người. Vô cùng xin lỗi nếu có sơ sót này!</p>
-                    <div className="col-10 mx-auto">
-                      <p className="uk-heading-divider">Tháng 11/2017</p>
-                      <table className="table table-bordered uk-table uk-table-striped">
-                        <thead>
-                          <tr>
-                            <th>Họ tên</th>
-                            <th>Tháng 11/2017</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Thừa</td>
-                            <td>1.600.000đ</td>
-                          </tr>
-                          <tr>
-                            <td>T.Phùng- Sở KHCN</td>
-                            <td>10,000,000 ₫</td>
-                          </tr>
-                          <tr>
-                            <td>Chị Thủy Tiên - SGTech</td>
-                            <td>500,000 ₫</td>
-                          </tr>
-                          <tr>
-                            <td>Bạn Võ Kim Bang -SH97</td>
-                            <td>1,000,000 ₫</td>
-                          </tr>
-                          <tr>
-                            <td>aLong-VEF staff</td>
-                            <td>1,000,000 ₫</td>
-                          </tr>
-                          <tr>
-                            <td>aThái Hà - VEF 03</td>
-                            <td>500,000 ₫</td>
-                          </tr>
-                          <tr>
-                            <td>Nghi-bóng bàn</td>
-                            <td>3,000,000 ₫</td>
-                          </tr>
-                          <tr>
-                            <td>A HO-LE </td>
-                            <td>2,000,000 ₫</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                  <p className="">Xin chân thành cám ơn các Thầy, Cô, bạn bè, cùng các anh chị em đã chung tay đóng góp cho Vietnamese and Youth (VAY). </p>
+                  <p>Ngoài ra, Thừa xin phép ghi tên mọi người theo cách gọi thân quen thay vì để họ tên đầy đủ. Ai muốn được ghi rõ họ tên thì báo Thừa sửa lại nhé. </p>
+                  <p>Tự tin là không bỏ sót tên của anh chị em nào, nhưng nếu có thì vui lòng nhắn tin cho Thừa kiểm tra lại và ghi thêm vào nhe mọi người. Vô cùng xin lỗi nếu có sơ sót này!</p>
+                  <div className="col-12 col-md-10 mx-auto">
+                    <p className="uk-heading-divider">Tháng 11/2017</p>
+                    <table className="table table-bordered uk-table uk-table-striped">
+                      <thead>
+                        <tr>
+                          <th>Họ tên</th>
+                          <th>Tháng 11/2017</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Thừa</td>
+                          <td>1.600.000đ</td>
+                        </tr>
+                        <tr>
+                          <td>T.Phùng- Sở KHCN</td>
+                          <td>10,000,000 ₫</td>
+                        </tr>
+                        <tr>
+                          <td>Chị Thủy Tiên - SGTech</td>
+                          <td>500,000 ₫</td>
+                        </tr>
+                        <tr>
+                          <td>Bạn Võ Kim Bang -SH97</td>
+                          <td>1,000,000 ₫</td>
+                        </tr>
+                        <tr>
+                          <td>aLong-VEF staff</td>
+                          <td>1,000,000 ₫</td>
+                        </tr>
+                        <tr>
+                          <td>aThái Hà - VEF 03</td>
+                          <td>500,000 ₫</td>
+                        </tr>
+                        <tr>
+                          <td>Nghi-bóng bàn</td>
+                          <td>3,000,000 ₫</td>
+                        </tr>
+                        <tr>
+                          <td>A HO-LE </td>
+                          <td>2,000,000 ₫</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -156,7 +154,7 @@ export default class HomePage extends Component {
                   <span aria-hidden="true">&times;</span>
                 </button>
                 <div className="container">
-                  <div className="col-6 mx-auto">
+                  <div className="col-12 col-md-6 mx-auto">
                     <h3>Cảm ơn sự quan tâm và ủng hộ của bạn cho VAY</h3>
                     <p>Tiền ủng hộ các em nhỏ cho dự án VAY xin vui lòng gửi về:</p>
                     <table className="table table-bordered uk-table uk-table-striped">
@@ -181,18 +179,18 @@ export default class HomePage extends Component {
                             <img className="img-bank" src={paypal} alt="" />
                           </th>
                           <th className="image-header">
-                          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                            <input type="hidden" name="cmd" value="_donations"/>
-                            <input type="hidden" name="business" value="tnt8@cornell.edu"/>
-                            <input type="hidden" name="lc" value="US"/>
-                            <input type="hidden" name="item_name" value="Vietnamese and Youth"/>
-                            <input type="hidden" name="item_number" value="VAY"/>
-                            <input type="hidden" name="no_note" value="0"/>
-                            <input type="hidden" name="currency_code" value="USD"/>
-                            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest"/>
-                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
-                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
-                          </form>
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                              <input type="hidden" name="cmd" value="_donations" />
+                              <input type="hidden" name="business" value="tnt8@cornell.edu" />
+                              <input type="hidden" name="lc" value="US" />
+                              <input type="hidden" name="item_name" value="Vietnamese and Youth" />
+                              <input type="hidden" name="item_number" value="VAY" />
+                              <input type="hidden" name="no_note" value="0" />
+                              <input type="hidden" name="currency_code" value="USD" />
+                              <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest" />
+                              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+                              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                            </form>
                           </th>
                         </tr>
                       </thead>
@@ -211,7 +209,7 @@ export default class HomePage extends Component {
               <h6 className="sub-header">Đăng kí</h6>
               <hr className="uk-divider-icon" />
             </div>
-            <div className="col-10 mx-auto">
+            <div className="col-12 col-md-10 mx-auto">
               <div className="row">
                 <div className="col-12 col-md-4" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
                   <div className="uk-text-center">

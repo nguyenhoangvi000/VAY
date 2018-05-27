@@ -32,9 +32,9 @@ export const StepEight = (props) => {
                 </div>
             </div>
             <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="linkIDMentee">Link hình 2 mặt chứng minh nhân dân*:</label>
+                <label className="uk-form-label" htmlFor="linkCardMentee">Link hình 2 mặt chứng minh nhân dân*:</label>
                 <div className="uk-form-controls">
-                    <input onChange={props.handleInputChange} className="uk-input" name="linkIDMentee" id="linkIDMentee" type="text" placeholder="" />
+                    <input onChange={props.handleInputChange} className="uk-input" name="linkCardMentee" id="linkCardMentee" type="text" placeholder="" />
                 </div>
             </div>
         </div>
