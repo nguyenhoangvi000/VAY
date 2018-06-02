@@ -24,6 +24,7 @@ export default class HomePage extends Component {
     this.child1 = React.createRef();
     this.state = {
       isScrollToFooter: false,
+      showMembersModal: false
     }
   }
 
@@ -32,6 +33,12 @@ export default class HomePage extends Component {
   }
   registerMentee = () => {
     this.child1.current.toggleMentee();
+  }
+
+  showMembers = () => {
+    this.setState({
+      showMembersModal: !this.state.showMembersModal
+    })
   }
 
   componentDidMount() {
@@ -196,6 +203,7 @@ export default class HomePage extends Component {
                       </thead>
                     </table>
                     <p><b>Lưu ý:</b> 1% số tiền bạn đóng góp sẽ được sử dụng cho chi phí vận hành, để có thể duy trì VAY hỗ trợ nhiều các bạn trẻ hơn nữa</p>
+                    <p>Bạn cũng có thể gửi các công việc partime hỗ trợ cho các em qua email: <a href="mailto: vay365vn@gmail.com">vay365vn@gmail.com</a></p>
                   </div>
                 </div>
               </div>
@@ -203,7 +211,7 @@ export default class HomePage extends Component {
           </div>
           <Story />
           <Scheme />
-          <Member />
+          <Member showMembers={this.showMembers} showMembersModal={this.state.showMembersModal} />
           <div className="row register-section">
             <div className="col-9 mx-auto">
               <h6 className="sub-header">Đăng kí</h6>
@@ -215,7 +223,7 @@ export default class HomePage extends Component {
                   <div className="uk-text-center">
                     <div className="uk-inline-clip uk-transition-toggle" tabIndex="0">
                       <img src={mentor} alt="" />
-                      <div className="uk-position-center uk-panel"><h1 className="white-text">HƯỚNG DẪN</h1></div>
+                      <div className="uk-position-center uk-panel"><h1 className="white-text">HƯỚNG DẪN (MENTOR)</h1></div>
                       <div className="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-default uk-flex uk-flex-column uk-flex-center uk-flex-middle">
                         <p className="uk-text-justify">Bạn là người sẽ theo dõi quá trình học tập và làm việc của các bạn học sinh sinh viên nhận được sự giúp đỡ của VAY và đưa ra những sự trợ giúp khi cần thiết.</p>
                         <button onClick={this.registerMentor} className="uk-button uk-button-danger">Đăng kí</button>
@@ -228,7 +236,7 @@ export default class HomePage extends Component {
                   <div className="uk-text-center">
                     <div className="uk-inline-clip uk-transition-toggle" tabIndex="0">
                       <img src={mentee} alt="" />
-                      <div className="uk-position-center uk-panel"><h1 className="white-text">NHẬN HỖ TRỢ</h1></div>
+                      <div className="uk-position-center uk-panel"><h1 className="white-text">NHẬN HỖ TRỢ (MENTEE)</h1></div>
                       <div className="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-default uk-flex uk-flex-column uk-flex-center uk-flex-middle">
                         <p className="uk-text-justify">Bạn sẽ nhận được sự giúp đỡ của VAY về chi phí và được người hướng dẫn hỗ trợ trong suốt quá trình học tập</p>
                         <button onClick={this.registerMentee} className="uk-button uk-button-danger">Đăng kí</button>
@@ -241,11 +249,11 @@ export default class HomePage extends Component {
                   <div className="uk-text-center">
                     <div className="uk-inline-clip uk-transition-toggle" tabIndex="0">
                       <img src={invester} alt="" />
-                      <div className="uk-position-center uk-panel"><h1 className="white-text">ỦNG HỘ</h1></div>
+                      <div className="uk-position-center uk-panel"><h1 className="white-text">ỦNG HỘ (DONOR)</h1></div>
                       <div className="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-default uk-flex uk-flex-column uk-flex-center uk-flex-middle">
                         <p className="uk-text-justify">Bạn sẽ hỗ trợ nguồn kinh phí để giúp đỡ các em sinh viên học sinh, và hỗ trợ VAY trong công tác vận hành</p>
                         <div className="uk-nav-divider"></div>
-                        <button className="uk-button uk-button-danger">Đăng kí</button>
+                        <button uk-toggle="target: #how-to-donate" className="uk-button uk-button-danger">Đăng kí</button>
                       </div>
                     </div>
                   </div>

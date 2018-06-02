@@ -32,22 +32,21 @@
         }
         .facebook-fanpage {
         }
+        .email-vay {
+            cursor: pointer;
+        }
+        .email-vay:hover {
+            color: #007bff;
+        }
     }
 }
 
 @media (max-width: 575.98px) {
-    // .facebook-fanpage {
-    //     display: none;
-    // }
 }
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
-    // .facebook-fanpage {
-    //     div {
-    //         display: none;
-    //     }
-    // }
+    
 }
 
 // Medium devices (tablets, less than 992px)

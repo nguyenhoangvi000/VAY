@@ -17,6 +17,7 @@ import { StepNine } from './components/StepNine/index';
 import { StepTen } from './components/StepTen/index';
 import { StepEleven } from './components/StepEleven/index';
 import { StepSorry } from './components/StepSorry/index';
+import { StepSuccess } from './components/StepSuccess/index';
 
 export default class Mentee extends Component {
 
@@ -59,7 +60,6 @@ export default class Mentee extends Component {
     }
 
     nextStepMentee = () => {
-        console.log(this.state.mentee);
         this.setState({
             step: this.state.step + 1
         })
@@ -80,19 +80,18 @@ export default class Mentee extends Component {
 
     submit = () => {
         let that = this;
-        console.log("OK");
-        // this.setState({
-        //     clicked: true
-        // })
+        this.setState({
+            clicked: true,
+            step: 12
+        })
         var jqxhr = $.ajax({
             url: 'https://script.google.com/macros/s/AKfycbyYQ1g2-trWKZAahLKRUe4EI1iPYQ8mup4H716ix--JElenmace/exec',
             method: "POST",
             dataType: "json",
             data: JSON.parse(JSON.stringify(this.state.mentee))
         }).then((res) => {
-            console.log(res);
             if (res.result === "success") {
-                that.togglementee();
+                this.toggleMentee();
                 this.setState({
                     clicked: false
                 })
@@ -318,6 +317,9 @@ export default class Mentee extends Component {
             case 11:
                 stepComponent = <StepEleven modal={this.state.modalMentee} toggle={this.toggleMentee} handleInputChange={this.handleInputChange} />
                 break;
+            case 12:
+                stepComponent = <StepSuccess modal={this.state.modalMentee} toggle={this.toggleMentee} handleInputChange={this.handleInputChange} />
+                break;
             default:
                 stepComponent = <StepSorry modal={this.state.modalMentee} toggle={this.toggleMentee} handleInputChange={this.handleInputChange} />
                 break;
@@ -329,16 +331,16 @@ export default class Mentee extends Component {
                     {stepComponent}
                     <div className="uk-margin">
                         {
-                            this.state.step!=-1
-                            ? this.state.step < 10
-                                ? (this.state.step > 1
-                                    ? <div className="col-12 offset-md-5 col-md-7 no-padding uk-flex uk-flex-between">
-                                        <button className="uk-button uk-float-right uk-button-default" onClick={this.prevousStepMentee}>Trở lại</button>
-                                        <button className="uk-button uk-float-right uk-button-primary" onClick={this.nextStepMentee}>Tiếp tục</button>
-                                    </div>
-                                    : <button className="uk-button uk-float-right uk-button-primary" onClick={this.nextStepMentee}>Tiếp tục</button>)
-                                : <button className="uk-button uk-float-right uk-button-primary" disabled={this.state.clicked} onClick={this.submit}>Đăng kí</button>
-                            : ''
+                            this.state.step != -1
+                                ? this.state.step < 10
+                                    ? (this.state.step > 1
+                                        ? <div className="col-12 offset-md-5 col-md-7 no-padding uk-flex uk-flex-between">
+                                            <button className="uk-button uk-float-right uk-button-default" onClick={this.prevousStepMentee}>Trở lại</button>
+                                            <button className="uk-button uk-float-right uk-button-primary" onClick={this.nextStepMentee}>Tiếp tục</button>
+                                        </div>
+                                        : <button className="uk-button uk-float-right uk-button-primary" onClick={this.nextStepMentee}>Tiếp tục</button>)
+                                    : <button className="uk-button uk-float-right uk-button-primary" disabled={this.state.clicked} onClick={this.submit}>Đăng kí</button>
+                                : ''
                         }
                     </div>
                 </ModalBody>

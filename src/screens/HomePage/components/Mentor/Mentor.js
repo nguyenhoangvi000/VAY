@@ -118,7 +118,6 @@ export default class Mentor extends Component {
                 })
                 break;
             case "radioNotAgree":
-                console.log(event.target.value);
                 this.setState({
                     mentor: Object.assign({}, this.state.mentor, { agree: event.target.value })
                 })

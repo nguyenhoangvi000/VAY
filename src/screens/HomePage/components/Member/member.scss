@@ -1,0 +1,18 @@
+@import '../../../../common/styles/_variables.scss';
+@import '../../../../common/styles/_colors.scss';
+@import '../../../../common/styles/_function.scss';
+.member-section {
+    .uk-card {
+        cursor: pointer;
+    }
+    @media (min-width: 576px) {
+        .modal-dialog {
+            max-width: 800px !important;
+            margin: 1.75rem auto;
+            .image-card {
+                height: em(120);
+                width: em(140);
+            }
+        }
+    }
+}

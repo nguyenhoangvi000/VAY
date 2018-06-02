@@ -20,14 +20,8 @@ export default class Header extends Component {
             <div className="col-12 col-md-4">
               <div className="col-12 col-md-6">
                 <p className="uk-text-left spacing-footer-content">THÔNG TIN LIÊN HỆ</p>
-                <p className="uk-text-left">+84 1672 491 950</p>
-                <p className="uk-text-left">nguyenhoangvi000@gmail.com</p>
+                <p onClick={() => { window.location.href = "mailto: vay365vn@gmail.com" }} className="uk-text-left email-vay">vay365vn@gmail.com</p>
               </div>
-              <div className="col-12 col-md-6">
-                <p className="uk-text-left">+84 1672 491 950</p>
-                <p className="uk-text-left">nguyenhoangvi000@gmail.com</p>
-              </div>
-
             </div>
             {/* <div className="col-12 col-md-3 facebook-fanpage"></div> */}
             <div className="col-12 col-md-4 facebook-fanpage">
